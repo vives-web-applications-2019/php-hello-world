@@ -1,6 +1,12 @@
 <?php
-    $title = "My first PHP website";
-    $number = 10 + 20;
+    require_once('./lib/h1.php');
+    require_once('./lib/p.php');
+
+    $title = new H1('My first PHP Website');
+    $introduction[] = new P('lorem ipsum');
+    $introduction[] = new P('dolorem sitat');
+    $introduction[] = new P('amet hihi haha');
+    $introduction[] = new P();
 
 ?>
 
@@ -13,7 +19,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1><?php echo $title ?></h1>
-    <p><?php echo $number ?> </p>
+    <?php echo $title ?>
+    <?php foreach ($introduction as $paragraph) {
+        echo $paragraph;
+    } ?>
 </body>
 </html>
