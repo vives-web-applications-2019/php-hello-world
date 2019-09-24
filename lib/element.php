@@ -2,8 +2,8 @@
 
 class Element 
 {
-    private $content = "";
-    private $element = "";
+    protected $content = "";
+    protected $element = "";
 
     public function __construct($element, $content = "") {
         $this->content = $content;

@@ -1,10 +1,14 @@
 <?php
     require_once('./lib/h1.php');
     require_once('./lib/p.php');
+    require_once('./lib/hr.php');
+    require_once('./lib/br.php');
 
     $title = new H1('My first PHP Website');
     $introduction[] = new P('lorem ipsum');
+    $introduction[] = new BR();
     $introduction[] = new P('dolorem sitat');
+    $introduction[] = new HR();
     $introduction[] = new P('amet hihi haha');
     $introduction[] = new P();
 
