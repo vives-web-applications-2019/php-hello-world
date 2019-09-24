@@ -3,14 +3,18 @@
     require_once('./lib/p.php');
     require_once('./lib/hr.php');
     require_once('./lib/br.php');
+    require_once('./lib/img.php');
 
-    $title = new H1('My first PHP Website');
-    $introduction[] = new P('lorem ipsum');
+    $link = 'https://pics.me.me/learns-to-program-learned-php-poor-soul-34365219.png';
+
+    $title = new H1('My first PHP Website', ['id' => 'title', 'style' => 'background-color: yellow;']);
+    $introduction[] = new P('lorem ipsum', ['style' => 'color: blue;']);
     $introduction[] = new BR();
     $introduction[] = new P('dolorem sitat');
     $introduction[] = new HR();
     $introduction[] = new P('amet hihi haha');
     $introduction[] = new P();
+    $introduction[] = new Img(['src' => $link]);
 
 ?>
 

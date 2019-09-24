@@ -6,8 +6,8 @@ class Element extends VoidElement
 {
     protected $content = "";
 
-    public function __construct($element, $content = "") {
-        parent::__construct($element);
+    public function __construct($element, $content = "", $attributes = []) {
+        parent::__construct($element, $attributes);
         $this->content = $content;
     }
 
