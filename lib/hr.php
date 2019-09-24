@@ -1,14 +1,10 @@
 <?php
 
-require_once('element.php');
+require_once('voidElement.php');
 
-class HR extends Element{
+class HR extends VoidElement{
 
     public function __construct() {
         parent::__construct('hr');
-    }
-
-    public function __toString() {
-        return "<$this->element>";
     }
 }

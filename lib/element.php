@@ -1,16 +1,18 @@
 <?php
 
-class Element 
+require_once('voidElement.php');
+
+class Element extends VoidElement
 {
     protected $content = "";
-    protected $element = "";
 
     public function __construct($element, $content = "") {
+        parent::__construct($element);
         $this->content = $content;
-        $this->element = $element;
     }
 
     public function __toString() {
-        return "<$this->element>$this->content</$this->element>";
+        $opentag = parent::__toString();
+        return "$opentag$this->content</$this->element>";
     }
 }
